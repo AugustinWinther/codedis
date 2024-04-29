@@ -20,7 +20,7 @@ Usage:
 ```
 
 Renders to:
-
+![image](https://github.com/AugustinWinther/codedis/assets/30674646/76bb13d5-adc8-457f-bd55-53e3fd5c5df7)
 
 
 It is very basic and limited, but it does what I need it too, and hope that it may be of help to others. I'm most likely not going to develop it further than this.
