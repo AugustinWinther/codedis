@@ -8,15 +8,15 @@ Usage:
 #import "@preview/codedis:0.1.0": code
 
 // READ IN CODE
-#let codeblock_1 = read("some_code.py")
-#let codeblock_2 = read("some_code.cpp")
+#let codeblock-1 = read("some_code.py")
+#let codeblock-2 = read("some_code.cpp")
 
 #set page(numbering: "1")
 #v(80%)
 
 // DEFAULT LANGUAGE IS Python ("py")
-#code(codeblock_1)
-#code(codeblock_2, lang: "cpp")
+#code(codeblock-1)
+#code(codeblock-2, lang: "cpp")
 ```
 
 Renders to:
