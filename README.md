@@ -6,7 +6,7 @@ Usage:
 
 ```typ
 // IMPORT PACKAGE
-#import "@preview/codedis:0.1.0": code
+#import "@preview/codedis:0.2.0": code
 
 // READ IN CODE
 #let codeblock-1 = read("some_code.py")
@@ -26,4 +26,5 @@ Renders to:
 
 
 It is very basic and limited, but it does what I need it too, and hope that it may be of help to others. I'm most likely not going to develop it further than this.
+
 
