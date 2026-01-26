@@ -7,9 +7,12 @@
   line-color-1: luma(250),
   line-color-2: luma(240),
   lines: none,
+  line-numbers: false,
+  line-number-color: luma(130),
 ) = {
 
   // Filter code to only include specified lines
+  let start-line = if lines != none { lines.at(0) } else { 1 }
   let code = if lines != none {
     let code-lines = code.split("\n")
     let start = lines.at(0) - 1  // Convert to 0-indexed
@@ -48,6 +51,9 @@
       else { return line-color-1 }
     }
 
+    let display-line-num = line.number + start-line - 1
+    let line-num-width = 2.5em
+
     block(
       breakable: false,
       height: line-height,
@@ -57,7 +63,15 @@
       radius: get-radius(line.number),
       stroke: get-stroke(line.number),
       spacing: -0.4em,
-      text(size: font-size)[#line.body]
+      if line-numbers {
+        grid(
+          columns: (line-num-width, 1fr),
+          text(size: font-size, fill: line-number-color)[#display-line-num],
+          text(size: font-size)[#line.body],
+        )
+      } else {
+        text(size: font-size)[#line.body]
+      }
     )
   }
 
