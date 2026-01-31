@@ -24,6 +24,7 @@ Example usage:
 
 Renders to: 
 
-![image](example.png)
+![image](https://raw.githubusercontent.com/AugustinWinther/codedis/main/example.png)
+
 
 
